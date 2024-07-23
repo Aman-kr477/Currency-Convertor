@@ -17,12 +17,12 @@ const fetchData = async () => {
       const option = document.createElement("option");
       const firstCurrencyKey = Object.keys(country.currencies)[0];
       option.value = firstCurrencyKey;
-      option.text = `${country.flag} ${firstCurrencyKey}- ${country.name.common}`;
+      option.text = `${country.flag} ${firstCurrencyKey}- ${country.currencies[firstCurrencyKey].name}`;
       selectCountryBox[0].appendChild(option);
       const option1 = document.createElement("option");
       const firstCurrencyKey1 = Object.keys(country.currencies)[0];
       option1.value = firstCurrencyKey1;
-      option1.text = `${country.flag} ${firstCurrencyKey1}- ${country.name.common}`;
+      option1.text = `${country.flag} ${firstCurrencyKey1}- ${country.currencies[firstCurrencyKey1].name}`;
       selectCountryBox[1].appendChild(option1);
     });
   } catch (error) {
